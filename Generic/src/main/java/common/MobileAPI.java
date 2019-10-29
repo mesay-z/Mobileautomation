@@ -69,17 +69,17 @@ public class MobileAPI {
         if (OS.equalsIgnoreCase("android")) {
             cap.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
             cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, version);
-            cap.setCapability(MobileCapabilityType.APP_PACKAGE, "com.tdbank");
-            cap.setCapability(MobileCapabilityType.APP_ACTIVITY, "com.td.dcts.android.us.app.SplashScreenActivity");
+            cap.setCapability(MobileCapabilityType.APP_PACKAGE, "com.ebay");
+            cap.setCapability(MobileCapabilityType.APP_ACTIVITY, "com.ebay.dcts.android.us.app.SplashScreenActivity");
             if (appiumDriver == null) {
                 appiumDriver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), cap);
             }
         } else {
             cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, version);
-            cap.setCapability(MobileCapabilityType.APP_PACKAGE, "com.tdbank");
+            cap.setCapability(MobileCapabilityType.APP_PACKAGE, "com.ebay");
             cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
             cap.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.IOS);
-            cap.setCapability(MobileCapabilityType.APP_PACKAGE, "com.tdbank");
+            cap.setCapability(MobileCapabilityType.APP_PACKAGE, "com.ebay");
             if (appiumDriver == null) {
                 appiumDriver = new IOSDriver(new URL("http://" + appiumPort + "/wd/hub"), cap);
             }
